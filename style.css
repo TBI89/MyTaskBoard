@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "my-task-font";
+    src: url(assets/fonts/Pangolin-Regular.ttf);
+}
+
+h1 {
+    font-family: "my-task-font";
+    text-align: center;
+}
+
+body {
+    background-image: url(assets/images/page-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+form {
+    font-family: "my-task-font";
+    font-size: large;
+    background-image: url(assets/images/form-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 10px;
+    display: inline-block;
+}
+
+#taskSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.task {
+    font-family: "my-task-font";
+    background-image: url(assets/images/notes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.task-description {
+    margin-top: 40px;
+}
+
+.task-date {
+    padding-top: 180px;
+    padding-right: 200px;
+}
+
+.clear {
+    opacity: 0;
+}
+
+.clear:hover {
+    opacity: 1;
+}
+
+.clear {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.task-description {
+    font-weight: bold;
+}
+
+.task-date {
+    margin-top: 5px;
+}
