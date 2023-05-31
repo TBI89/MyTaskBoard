@@ -1,3 +1,5 @@
+
+/* Unique font for the header, form and the text inside the div: */
 @font-face {
     font-family: "my-task-font";
     src: url(assets/fonts/Pangolin-Regular.ttf);
@@ -6,6 +8,7 @@
 h1 {
     font-family: "my-task-font";
     text-align: center;
+    font-size: 60px;
 }
 
 body {
@@ -29,6 +32,21 @@ form {
     display: inline-block;
 }
 
+/* Position the inputs between the notebook lines and remove the borders: */
+#taskDescriptionBox {
+    border: none;
+    margin-top: 5px;
+}
+
+#dateAndTimeBox {
+    border: none;  
+}
+
+.btn {
+    margin-top: 45px;
+}
+
+/* Position the sticky notes from left to right: */
 #taskSection {
     display: flex;
     flex-wrap: wrap;
@@ -42,16 +60,17 @@ form {
     background-size: cover;
     width: 320px;
     height: 320px;
-    position: relative;
+    position: relative; /* Access to the "X" button (when hovering) */
     display: inline-block;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    overflow: auto;
-    animation: fadeIn 1s forwards;
+    overflow: auto; /* Vertical scrollbar */
+    animation: fadeIn 1s forwards; /* Fade in animation for the sticky note */
     opacity: 0;
 }
 
+/* Sticky note animation: */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -71,10 +90,15 @@ form {
     padding-right: 200px;
 }
 
+/* Remove button is unvisitable in that point: */
 .clear {
     opacity: 0;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
 }
 
+/* Remove button is visitable when hovering: */
 .clear:hover {
     opacity: 1;
 }
@@ -90,6 +114,7 @@ form {
 
 .task-description {
     font-weight: bold;
+    max-height: 240px; 
 }
 
 .task-date {
